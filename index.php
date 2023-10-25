@@ -60,3 +60,40 @@ greet("Alice");
     ?>
 </body>
 </html>
+
+//OOP concepts
+<?php
+// Define a class
+class Person {
+    // Properties (attributes)
+    public $name;
+    public $age;
+
+    // Constructor method
+    public function __construct($name, $age) {
+        $this->name = $name;
+        $this->age = $age;
+    }
+
+    // Methods (functions)
+    public function greet() {
+        echo "Hello, my name is " . $this->name . " and I am " . $this->age . " years old.<br>";
+    }
+
+    public function haveBirthday() {
+        $this->age++;
+        echo $this->name . " is now " . $this->age . " years old.<br>";
+    }
+}
+
+// Create objects (instances) of the class
+$person1 = new Person("Alice", 25);
+$person2 = new Person("Bob", 30);
+
+// Access properties and call methods
+$person1->greet();
+$person2->greet();
+
+$person1->haveBirthday();
+$person2->haveBirthday();
+?>
